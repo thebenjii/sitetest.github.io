@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Welcome to INTERNSURF
+# Welcome to the Internship Job App
 
 Start your career journey with the best internship opportunities.
 
@@ -11,8 +11,10 @@ Start your career journey with the best internship opportunities.
 
 {% for internship in site.pages %}
   {% if internship.layout == "internship" %}
-  ---
-  [{{ internship.title }}]({{ internship.url | relative_url }})
+
+  ***
+
+  ### [{{ internship.title }}]({{ internship.url | relative_url }})
 
   **Company**: {{ internship.company }}
 
@@ -22,6 +24,7 @@ Start your career journey with the best internship opportunities.
 
   [View Details and Apply]({{ internship.url | relative_url }})
 
-  ---
+  ***
+
   {% endif %}
 {% endfor %}

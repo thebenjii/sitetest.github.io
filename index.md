@@ -12,7 +12,7 @@ Start your career journey with the best internship opportunities.
 {% for internship in site.pages %}
   {% if internship.layout == "internship" %}
   ---
-  ### [{{ internship.title }}]({{ internship.url | relative_url }})
+  [{{ internship.title }}]({{ internship.url | relative_url }})
 
   **Company**: {{ internship.company }}
 

@@ -1,9 +1,9 @@
 ---
 layout: internship
-title: Marketing Intern
-company: MarketMakers Inc.
+title: CRCP Intern
+company: JAMInc.
 location: New York, NY
-description: Assist in developing marketing strategies.
+description: Creativity.
 permalink: /internships/marketing-intern/
 ---
 

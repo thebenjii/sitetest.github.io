@@ -14,7 +14,7 @@ Start your career journey with the best internship opportunities.
 
   ***
 
-  ### [{{ internship.title }}]({{ internship.url | relative_url }})
+  [{{ internship.title }}]({{ internship.url | relative_url }})
 
   **Company**: {{ internship.company }}
 

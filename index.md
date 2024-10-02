@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Welcome to the Internship Job App
+# Welcome to INTERNSURF
 
 Start your career journey with the best internship opportunities.
 

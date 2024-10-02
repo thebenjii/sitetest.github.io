@@ -1,9 +1,9 @@
 ---
-layout: default
-title: CRCP Intern
-company: JamStudios.
-location: SMU, TX
-description: Creativity.
+layout: internship
+title: Marketing Intern
+company: MarketMakers Inc.
+location: New York, NY
+description: Assist in developing marketing strategies.
 permalink: /internships/marketing-intern/
 ---
 

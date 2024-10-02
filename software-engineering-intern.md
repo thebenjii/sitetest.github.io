@@ -1,5 +1,5 @@
 ---
-layout: internship
+layout: default
 title: Software Engineering Intern
 company: TechCorp
 location: San Francisco, CA
@@ -17,6 +17,30 @@ permalink: /internships/software-engineering-intern/
 
 {{ page.description }}
 
-**How to Apply:**
+---
 
-Please send your resume to [jobs@techcorp.com](mailto:jobs@techcorp.com).
+## Apply for This Position
+
+<form action="https://formspree.io/f/your-form-id" method="POST">
+  <!-- Include a hidden field with the internship title -->
+  <input type="hidden" name="internship" value="{{ page.title }}">
+
+  <!-- Applicant's Name -->
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <!-- Applicant's Email -->
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="_replyto" required><br><br>
+
+  <!-- Applicant's Major -->
+  <label for="major">Major:</label><br>
+  <input type="text" id="major" name="major"><br><br>
+
+  <!-- Applicant's Contact Information -->
+  <label for="contact">Contact Information:</label><br>
+  <textarea id="contact" name="contact" rows="4" cols="50"></textarea><br><br>
+
+  <!-- Submit Button -->
+  <input type="submit" value="Submit Application">
+</form>

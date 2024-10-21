@@ -35,17 +35,17 @@ title: INTERNSURF
       <div class="internship-card">
         <h3>Software Engineering Intern</h3>
         <p>Join a leading tech company and gain hands-on experience with real-world projects.</p>
-        <a href="apply.md?position=software" class="btn">Apply Now</a>
+        <a href="/apply/?position=software" class="btn">Apply Now</a>
       </div>
       <div class="internship-card">
         <h3>Marketing Intern</h3>
         <p>Work with a dynamic marketing team and help execute campaigns for top brands.</p>
-        <a href="apply.md?position=marketing" class="btn">Apply Now</a>
+        <a href="/apply/?position=marketing" class="btn">Apply Now</a>
       </div>
       <div class="internship-card">
         <h3>Product Design Intern</h3>
         <p>Get creative and design cutting-edge products for a fast-paced startup.</p>
-        <a href="apply.md?position=design" class="btn">Apply Now</a>
+        <a href="/apply/?position=design" class="btn">Apply Now</a>
       </div>
     </div>
   </div>

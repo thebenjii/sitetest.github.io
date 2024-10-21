@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Internship Job App
+title: INTERNSURF
 ---
 
 <!-- Custom Navbar -->
@@ -21,7 +21,7 @@ title: Internship Job App
 <!-- Hero Section -->
 <section class="hero">
   <div class="container">
-    <h1>Find Your Dream Internship</h1>
+    <h1>Find Your Ideal Internship Opportunity</h1>
     <p>Connect with top companies and kickstart your career today.</p>
     <a href="#" class="btn">Get Started</a>
   </div>

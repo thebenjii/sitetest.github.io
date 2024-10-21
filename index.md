@@ -10,7 +10,7 @@ title: INTERNSURF
 <nav class="navbar">
   <div class="container">
     <div class="logo">
-      <a href="#">INTERNSURF </a>
+      <a href="#">INTERNSURF</a>
     </div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
@@ -38,16 +38,19 @@ title: INTERNSURF
       <div class="internship-card">
         <h3>Software Engineering Intern</h3>
         <p>Join a leading tech company and gain hands-on experience with real-world projects.</p>
+        <!-- Updated Apply Now Link -->
         <a href="/apply/?position=software" class="btn">Apply Now</a>
       </div>
       <div class="internship-card">
         <h3>Marketing Intern</h3>
         <p>Work with a dynamic marketing team and help execute campaigns for top brands.</p>
+        <!-- Updated Apply Now Link -->
         <a href="/apply/?position=marketing" class="btn">Apply Now</a>
       </div>
       <div class="internship-card">
         <h3>Product Design Intern</h3>
         <p>Get creative and design cutting-edge products for a fast-paced startup.</p>
+        <!-- Updated Apply Now Link -->
         <a href="/apply/?position=design" class="btn">Apply Now</a>
       </div>
     </div>

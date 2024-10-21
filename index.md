@@ -45,28 +45,41 @@ layout: default
 title: Home
 ---
 
-# Welcome to INTERNSURF
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Internship Portal</a>
+    ...
+  </div>
+</nav>
 
-Start your career journey with the best internship opportunities.
+<!-- Main content using Markdown -->
+# Welcome to the Internship Portal
 
-## Latest Internship Openings
+This platform helps you connect with top companies to find internships. Browse the opportunities below.
 
-{% for internship in site.pages %}
-  {% if internship.layout == "internship" %}
+<!-- Internship Listings Section (HTML part) -->
+<section class="internship-listings py-5">
+  <div class="container">
+    <h2 class="mb-4">Latest Internship Opportunities</h2>
+    <div class="row">
+      <!-- Cards for internships -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Software Engineering Intern</h5>
+            <p class="card-text">Join a leading tech company and gain hands-on experience...</p>
+            <a href="#" class="btn btn-primary">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  ***
-
-  [{{ internship.title }}]({{ internship.url | relative_url }})
-
-  **Company**: {{ internship.company }}
-
-  **Location**: {{ internship.location }}
-
-  **Description**: {{ internship.description | truncate: 100 }}
-
-  [View Details and Apply]({{ internship.url | relative_url }})
-
-  ***
-
-  {% endif %}
-{% endfor %}
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p>&copy; 2024 Internship Portal. All rights reserved.</p>
+  </div>
+</footer>

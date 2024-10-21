@@ -1,7 +1,10 @@
 ---
 layout: default
-title: INTERNSURD+F
+title: INTERNSURF
 ---
+
+<!-- Link to the CSS file -->
+<link rel="stylesheet" href="/assets/style.css">
 
 <!-- Custom Navbar -->
 <nav class="navbar">

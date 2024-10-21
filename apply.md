@@ -3,6 +3,17 @@ layout: default
 title: Internship Application
 ---
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const position = urlParams.get('position');
+    
+    if (position) {
+      document.getElementById('position').value = position;
+    }
+  });
+</script>
+
 <!-- Application Form -->
 <section class="application-form">
   <div class="container">

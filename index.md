@@ -57,7 +57,7 @@ title: INTERNSURF
 <!-- Footer -->
 <footer>
   <div class="container">
-    <p>&copy; 2024 Internship Portal. All rights reserved.</p>
+    <p>&copy; 2024 INTERNSURF. All rights reserved.</p>
     <div>
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Service</a>

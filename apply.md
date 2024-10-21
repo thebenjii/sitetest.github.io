@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Internship Application
+title: Apps for Internship
 permalink: /apply/
 ---
 

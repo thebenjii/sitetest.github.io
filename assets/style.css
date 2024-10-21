@@ -1,3 +1,58 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
 /* Hero Section */
 .hero {
   background-color: #0366d6;
@@ -15,27 +70,55 @@
   font-size: 1.25rem;
 }
 
-/* Card Styles */
-.card {
-  border: none;
-  margin-bottom: 30px;
+.hero .btn {
+  background-color: #fff;
+  color: #0366d6;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 500;
+.hero .btn:hover {
+  background-color: #eee;
 }
 
-.card-text {
-  font-size: 1rem;
+/* Internship Listings */
+.internship-listings {
+  padding: 50px 0;
+  background-color: #f4f4f4;
 }
 
-.btn-primary {
+.internship-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.internship-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.internship-card h3 {
+  margin-top: 0;
+}
+
+.internship-card p {
+  color: #666;
+}
+
+.internship-card .btn {
   background-color: #0366d6;
-  border-color: #0366d6;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.btn-primary:hover {
+.internship-card .btn:hover {
   background-color: #024e9b;
 }
 
@@ -45,4 +128,14 @@ footer {
   color: white;
   padding: 20px 0;
   text-align: center;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

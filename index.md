@@ -10,7 +10,7 @@ title: INTERNSURF
 <nav class="navbar">
   <div class="container">
     <div class="logo">
-      <a href="#">Internship Portal</a>
+      <a href="#">INTERNSURF </a>
     </div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>

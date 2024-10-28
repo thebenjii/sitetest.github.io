@@ -10,7 +10,7 @@ permalink: /profile/
 Hi, I’m Surf, an RA and student ambassador. I work closely with residents and encourage community engagement in our dorms.
 
 ## Contact Information
-- **Email:** surf@internsurf.com
+- **Email:** [surf@internsurf.com](mailto:surf@internsurf.com)
 - **LinkedIn:** [linkedin.com/in/surf](https://linkedin.com/in/surf)
 - **Phone:** (123) 456-7890
 

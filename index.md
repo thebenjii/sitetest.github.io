@@ -17,6 +17,9 @@ title: INTERNSURF
       <li><a href="#">Internships</a></li>
       <li><a href="#">Companies</a></li>
       <li><a href="#">About Us</a></li>
+      <li class="nav-item">
+  <a class="nav-link {% if page.url == '/profile/' %}active{% endif %}" href="{{ '/profile/' | relative_url }}">Profile</a>
+</li>
     </ul>
   </div>
 </nav>

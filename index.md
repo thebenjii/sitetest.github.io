@@ -10,13 +10,16 @@ title: INTERNSURF
 <nav class="navbar">
   <div class="container">
     <div class="logo">
-      <a href="/">INTERNSURF</a>
+      <a href="/">INTERNSURF</a> <!-- Updated link to go to the home page -->
     </div>
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
       <li><a href="/internships/">Internships</a></li>
       <li><a href="/companies/">Companies</a></li>
       <li><a href="/about/">About Us</a></li>
+      <li class="nav-item">
+        <a class="nav-link {% if page.url == '/profile/' %}active{% endif %}" href="{{ '/profile/' | relative_url }}">Profile</a>
+      </li>
     </ul>
   </div>
 </nav>

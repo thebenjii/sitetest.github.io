@@ -10,15 +10,15 @@ title: INTERNSURF
 <nav class="navbar">
   <div class="container">
     <div class="logo">
-      <a href="#">INTERNSURF</a>
+      <a href="/">INTERNSURF</a>
     </div>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Internships</a></li>
-      <li><a href="#">Companies</a></li>
-      <li><a href="#">About Us</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/internships/">Internships</a></li>
+      <li><a href="/companies/">Companies</a></li>
+      <li><a href="/about/">About Us</a></li>
       <li class="nav-item">
-        <a class="nav-link {% if page.url == '/profile/' %}active{% endif %}" href="#profile-section">Profile</a>
+        <a class="nav-link {% if page.url == '/profile/' %}active{% endif %}" href="{{ '/profile/' | relative_url }}">Profile</a>
       </li>
     </ul>
   </div>
@@ -52,38 +52,6 @@ title: INTERNSURF
         <h3>Product Design Intern</h3>
         <p>Get creative and design cutting-edge products for a fast-paced startup.</p>
         <a href="/apply/?position=design" class="btn">Apply Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Profile Section -->
-<section id="profile-section" class="container mt-5">
-  <div class="card mb-3" style="max-width: 100%;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{{ '/assets/images/profile-pic.jpg' | relative_url }}" class="img-fluid rounded-start" alt="Profile Picture">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h2 class="card-title">Damola's Profile</h2>
-          
-          <h5>About Me</h5>
-          <p>Hi, I’m Damola, an RA and supporter of student initiatives...</p>
-
-          <h5>Contact Information</h5>
-          <p><strong>Email:</strong> <a href="mailto:damola@example.com">damola@example.com</a></p>
-
-          <h5>Achievements</h5>
-          <ul>
-            <li>Organized and hosted community events</li>
-          </ul>
-
-          <h5>Skills</h5>
-          <ul>
-            <li>Leadership</li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>

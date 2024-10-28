@@ -82,6 +82,19 @@ body {
   background-color: #eee;
 }
 
+/* Profile page custom styles */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-body h5 {
+  color: #007bff;
+}
+
 /* Internship Listings */
 .internship-listings {
   padding: 50px 0;

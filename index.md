@@ -18,8 +18,8 @@ title: INTERNSURF
       <li><a href="#">Companies</a></li>
       <li><a href="#">About Us</a></li>
       <li class="nav-item">
-  <a class="nav-link {% if page.url == '/profile/' %}active{% endif %}" href="{{ '/profile/' | relative_url }}">Profile</a>
-</li>
+        <a class="nav-link {% if page.url == '/profile/' %}active{% endif %}" href="#profile-section">Profile</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -41,20 +41,49 @@ title: INTERNSURF
       <div class="internship-card">
         <h3>Software Engineering Intern</h3>
         <p>Join a leading tech company and gain hands-on experience with real-world projects.</p>
-        <!-- Updated Apply Now Link -->
         <a href="/apply/?position=software" class="btn">Apply Now</a>
       </div>
       <div class="internship-card">
         <h3>Marketing Intern</h3>
         <p>Work with a dynamic marketing team and help execute campaigns for top brands.</p>
-        <!-- Updated Apply Now Link -->
         <a href="/apply/?position=marketing" class="btn">Apply Now</a>
       </div>
       <div class="internship-card">
         <h3>Product Design Intern</h3>
         <p>Get creative and design cutting-edge products for a fast-paced startup.</p>
-        <!-- Updated Apply Now Link -->
         <a href="/apply/?position=design" class="btn">Apply Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Profile Section -->
+<section id="profile-section" class="container mt-5">
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{ '/assets/images/profile-pic.jpg' | relative_url }}" class="img-fluid rounded-start" alt="Profile Picture">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">Damola's Profile</h2>
+          
+          <h5>About Me</h5>
+          <p>Hi, I’m Damola, an RA and supporter of student initiatives...</p>
+
+          <h5>Contact Information</h5>
+          <p><strong>Email:</strong> <a href="mailto:damola@example.com">damola@example.com</a></p>
+
+          <h5>Achievements</h5>
+          <ul>
+            <li>Organized and hosted community events</li>
+          </ul>
+
+          <h5>Skills</h5>
+          <ul>
+            <li>Leadership</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

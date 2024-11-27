@@ -9,6 +9,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #f8f9fa;
 }
 
 /* Header */
@@ -29,12 +30,13 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .nav-links li a {
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
 }
 
 /* Hero Section */
@@ -42,70 +44,92 @@ body {
   text-align: center;
   background: #007bff;
   color: #fff;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .hero h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
   margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 .cta-btn {
   background: #fff;
   color: #007bff;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 2rem;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #e9ecef;
 }
 
 /* Internships Section */
 .internships {
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
 .internships h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
 .cards {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .card {
-  background: #f4f4f4;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
   width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h3 {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  color: #333;
 }
 
 .card p {
   margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #555;
 }
 
 .apply-btn {
   display: inline-block;
   background: #007bff;
   color: #fff;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 1.5rem;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+  background: #0056b3;
 }
 
 /* Footer */
@@ -113,18 +137,28 @@ body {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
 }
 
 .footer-links {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 1rem;
 }
 
 .footer-links li a {
   color: #fff;
   text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #e9ecef;
 }

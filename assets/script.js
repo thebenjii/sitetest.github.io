@@ -1,41 +1,38 @@
-// Track saved applications
-const savedApplications = [];
-
 document.addEventListener("DOMContentLoaded", () => {
   const applyButtons = document.querySelectorAll(".apply-btn");
-  const savedAppsBtn = document.getElementById("saved-apps-btn");
+  const savedApplications = [];
+  const savedAppsButton = document.getElementById("saved-apps-btn");
+  const iframe = document.getElementById("job-frame");
 
-  // Save application when an "Apply Now" link is clicked
-  applyButtons.forEach(button => {
-    button.addEventListener("click", event => {
-      event.preventDefault();
-      const jobLink = event.target.href;
-      const jobTitle = event.target.dataset.title;
+  // Open job link in iframe and save application
+  applyButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      const jobLink = e.target.href;
+      const jobTitle = e.target.dataset.title;
 
-      // Check if the application is already saved
-      const alreadySaved = savedApplications.some(app => app.link === jobLink);
-      if (!alreadySaved) {
+      // Open link in iframe
+      iframe.src = jobLink;
+
+      // Save application
+      if (!savedApplications.find((app) => app.link === jobLink)) {
         savedApplications.push({ title: jobTitle, link: jobLink });
-        alert(`Application for "${jobTitle}" has been saved.`);
+        alert(`Saved application for "${jobTitle}".`);
       } else {
-        alert(`Application for "${jobTitle}" is already saved.`);
+        alert(`"${jobTitle}" is already saved.`);
       }
-
-      // Open the job application link in the iframe
-      document.getElementById("job-frame").src = jobLink;
     });
   });
 
-  // Show saved applications when the save icon is clicked
-  savedAppsBtn.addEventListener("click", () => {
+  // Show saved applications
+  savedAppsButton.addEventListener("click", () => {
     if (savedApplications.length === 0) {
       alert("No applications saved yet.");
     } else {
-      let savedList = "Saved Applications:\n";
-      savedApplications.forEach((app, index) => {
-        savedList += `${index + 1}. ${app.title} - ${app.link}\n`;
-      });
-      alert(savedList);
+      const appList = savedApplications
+        .map((app, index) => `${index + 1}. ${app.title} - ${app.link}`)
+        .join("\n");
+      alert(`Saved Applications:\n${appList}`);
     }
   });
 });

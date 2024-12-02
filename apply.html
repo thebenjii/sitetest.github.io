@@ -41,7 +41,7 @@
       margin-bottom: 0.5rem;
       font-weight: bold;
     }
-    input, textarea, select, button {
+    input, textarea, button {
       margin-bottom: 1rem;
       padding: 0.5rem;
       font-size: 1rem;
@@ -71,7 +71,7 @@
   <!-- Content -->
   <div class="content">
     <h2 id="internship-title">Apply for an Internship</h2>
-    <form action="submit.html" method="POST" enctype="multipart/form-data">
+    <form id="application-form">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" placeholder="Your Full Name" required>
       
@@ -81,22 +81,47 @@
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
       
-      <label for="resume">Upload Resume</label>
-      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-      
       <label for="cover-letter">Cover Letter</label>
       <textarea id="cover-letter" name="cover-letter" rows="5" placeholder="Write your cover letter here..." required></textarea>
       
-      <button type="submit">Submit Application</button>
+      <button type="button" id="submit-btn">Submit Application</button>
     </form>
   </div>
+
+  <script>
+    // Dynamically set the internship title
+    const urlParams = new URLSearchParams(window.location.search);
+    const internshipTitle = urlParams.get('title');
+    if (internshipTitle) {
+      document.getElementById('internship-title').innerText = `Apply for ${internshipTitle}`;
+    }
+
+    // Save the application to localStorage
+    const form = document.getElementById('application-form');
+    const submitBtn = document.getElementById('submit-btn');
+
+    submitBtn.addEventListener('click', () => {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const coverLetter = document.getElementById('cover-letter').value;
+
+      if (name && email && phone && coverLetter) {
+        const applications = JSON.parse(localStorage.getItem('applications')) || [];
+        applications.push({
+          title: internshipTitle,
+          name,
+          email,
+          phone,
+          coverLetter
+        });
+        localStorage.setItem('applications', JSON.stringify(applications));
+        alert('Your application has been submitted!');
+        form.reset(); // Clear the form after submission
+      } else {
+        alert('Please fill out all fields before submitting.');
+      }
+    });
+  </script>
 </body>
-<script>
-  // Dynamically set the internship title based on the query parameter
-  const urlParams = new URLSearchParams(window.location.search);
-  const internshipTitle = urlParams.get('title');
-  if (internshipTitle) {
-    document.getElementById('internship-title').innerText = `Apply for ${internshipTitle}`;
-  }
-</script>
 </html>

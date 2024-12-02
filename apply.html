@@ -123,22 +123,37 @@
     const submitBtn = document.getElementById('submit-btn');
 
     submitBtn.addEventListener('click', () => {
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const coverLetter = document.getElementById('cover-letter').value;
+      // Get form inputs
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const coverLetter = document.getElementById('cover-letter').value.trim();
 
-      if (name && email && phone && coverLetter) {
-        const profileApplications = JSON.parse(localStorage.getItem('profileApplications')) || [];
-        if (!profileApplications.includes(internshipTitle)) {
-          profileApplications.push(internshipTitle);
-          localStorage.setItem('profileApplications', JSON.stringify(profileApplications));
-        }
-        alert('Your application has been submitted!');
-        form.reset(); // Clear the form after submission
-      } else {
+      // Validate form inputs
+      if (!name || !email || !phone || !coverLetter) {
         alert('Please fill out all fields before submitting.');
+        return;
       }
+
+      // Retrieve existing applications from localStorage
+      const storedApplications = localStorage.getItem('profileApplications');
+      const profileApplications = storedApplications ? JSON.parse(storedApplications) : [];
+
+      // Add new application
+      profileApplications.push({
+        title: internshipTitle,
+        name,
+        email,
+        phone,
+        coverLetter
+      });
+
+      // Save back to localStorage
+      localStorage.setItem('profileApplications', JSON.stringify(profileApplications));
+
+      // Confirm submission
+      alert('Your application has been submitted!');
+      form.reset(); // Clear the form after submission
     });
   </script>
 </body>

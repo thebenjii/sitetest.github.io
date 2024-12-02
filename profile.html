@@ -16,26 +16,10 @@
       background: #007bff;
       color: white;
       padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      text-align: center;
     }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .nav-links a:hover {
-      text-decoration: underline;
+    .header h1 {
+      margin: 0;
     }
     .content {
       max-width: 800px;
@@ -64,18 +48,20 @@
       border-radius: 5px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
+    .profile-section a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .profile-section a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <div class="logo">INTERNSURF</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="internships.html">Internships</a></li>
-      </ul>
-    </nav>
+    <h1>Your Profile</h1>
   </header>
 
   <!-- Content -->
@@ -89,14 +75,18 @@
   </div>
 
   <script>
-    // Load applied internships from localStorage
+    // Retrieve applications from localStorage
     const profileApplications = JSON.parse(localStorage.getItem('profileApplications')) || [];
     const profileApplicationsList = document.getElementById('profile-applications-list');
 
     if (profileApplications.length > 0) {
-      profileApplications.forEach((title) => {
+      profileApplications.forEach((app, index) => {
         const listItem = document.createElement('li');
-        listItem.textContent = title;
+        const link = document.createElement('a');
+        link.textContent = app.title;
+        link.href = `application-details.html?index=${index}`;
+        link.target = "_blank"; // Open in a new tab
+        listItem.appendChild(link);
         profileApplicationsList.appendChild(listItem);
       });
     } else {

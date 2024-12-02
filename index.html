@@ -3,60 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InternSurf</title>
+  <title>InternSurf - Find Your Dream Internship</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Header Section -->
+  <!-- Header -->
   <header class="header">
+    <div class="logo">INTERNSURF</div>
     <nav>
-      <div class="logo">INTERNSURF</div>
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#">Internships</a></li>
-        <li><a href="#">Companies</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
-      <button id="saved-apps-btn" class="save-btn" title="View Saved Applications">💾 Saved</button>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Find Your Ideal Internship Opportunity</h1>
-    <p>Connect with top companies and kickstart your career today.</p>
-    <a href="#" class="cta-btn">Get Started</a>
+    <h1>Find Your Dream Internship</h1>
+    <p>Browse opportunities from top companies and kickstart your career today.</p>
+    <a href="#internships" class="cta-btn">Get Started</a>
   </section>
 
-  <!-- Internships Section -->
-  <section class="internships">
+  <!-- Internship Listings -->
+  <section id="internships" class="internships">
     <h2>Latest Internship Opportunities</h2>
     <div class="cards">
       <div class="card">
         <h3>Software Engineering Intern</h3>
-        <p>Join a leading tech company and gain hands-on experience with real-world projects.</p>
-        <a href="https://example.com/software-engineering-job" class="apply-btn" data-title="Software Engineering Intern">Apply Now</a>
+        <p>Work with a leading tech company to gain hands-on experience on exciting projects.</p>
+        <a href="https://example.com/software-engineering-job" class="apply-btn">Apply Now</a>
       </div>
       <div class="card">
         <h3>Marketing Intern</h3>
-        <p>Work with a dynamic marketing team and help execute campaigns for top brands.</p>
-        <a href="https://example.com/marketing-job" class="apply-btn" data-title="Marketing Intern">Apply Now</a>
+        <p>Join a dynamic marketing team and contribute to campaigns for top brands.</p>
+        <a href="https://example.com/marketing-job" class="apply-btn">Apply Now</a>
       </div>
       <div class="card">
         <h3>Product Design Intern</h3>
-        <p>Get creative and design cutting-edge products for a fast-paced startup.</p>
-        <a href="https://example.com/product-design-job" class="apply-btn" data-title="Product Design Intern">Apply Now</a>
+        <p>Bring your creativity to life by designing cutting-edge products for a startup.</p>
+        <a href="https://example.com/product-design-job" class="apply-btn">Apply Now</a>
       </div>
     </div>
   </section>
 
-  <!-- Job Application Iframe Section -->
-  <section class="application-view">
-    <iframe id="job-frame" src="" title="Job Application"></iframe>
-  </section>
-
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2024 INTERNSURF. All rights reserved.</p>
     <ul class="footer-links">

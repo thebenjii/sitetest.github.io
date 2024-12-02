@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InternSurf - Application Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    .header {
+      background: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+    }
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .content h2 {
+      margin-bottom: 1rem;
+      color: #007bff;
+    }
+    .content p {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Application Details</h1>
+  </header>
+
+  <!-- Content -->
+  <div class="content" id="application-details">
+    <h2>Internship Title: <span id="title"></span></h2>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Phone:</strong> <span id="phone"></span></p>
+    <p><strong>Cover Letter:</strong></p>
+    <p id="cover-letter"></p>
+  </div>
+
+  <script>
+    // Retrieve application index from query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const index = parseInt(urlParams.get('index'), 10);
+
+    // Retrieve applications from localStorage
+    const profileApplications = JSON.parse(localStorage.getItem('profileApplications')) || [];
+
+    if (!isNaN(index) && profileApplications[index]) {
+      const application = profileApplications[index];
+      document.getElementById('title').textContent = application.title;
+      document.getElementById('name').textContent = application.name;
+      document.getElementById('email').textContent = application.email;
+      document.getElementById('phone').textContent = application.phone;
+      document.getElementById('cover-letter').textContent = application.coverLetter;
+    } else {
+      document.getElementById('application-details').innerHTML = '<p>Application not found.</p>';
+    }
+  </script>
+</body>
+</html>

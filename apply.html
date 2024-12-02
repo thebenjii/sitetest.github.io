@@ -96,7 +96,7 @@
       document.getElementById('internship-title').innerText = `Apply for ${internshipTitle}`;
     }
 
-    // Save the application to localStorage
+    // Save the application and update the profile
     const form = document.getElementById('application-form');
     const submitBtn = document.getElementById('submit-btn');
 
@@ -107,15 +107,11 @@
       const coverLetter = document.getElementById('cover-letter').value;
 
       if (name && email && phone && coverLetter) {
-        const applications = JSON.parse(localStorage.getItem('applications')) || [];
-        applications.push({
-          title: internshipTitle,
-          name,
-          email,
-          phone,
-          coverLetter
-        });
-        localStorage.setItem('applications', JSON.stringify(applications));
+        const profileApplications = JSON.parse(localStorage.getItem('profileApplications')) || [];
+        if (!profileApplications.includes(internshipTitle)) {
+          profileApplications.push(internshipTitle);
+          localStorage.setItem('profileApplications', JSON.stringify(profileApplications));
+        }
         alert('Your application has been submitted!');
         form.reset(); // Clear the form after submission
       } else {

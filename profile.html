@@ -16,10 +16,26 @@
       background: #007bff;
       color: white;
       padding: 1rem 2rem;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .header h1 {
-      margin: 0;
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
     }
     .content {
       max-width: 800px;
@@ -61,7 +77,14 @@
 <body>
   <!-- Header -->
   <header class="header">
-    <h1>Your Profile</h1>
+    <div class="logo">INTERNSURF</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="internships.html">Internships</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Content -->
@@ -75,7 +98,7 @@
   </div>
 
   <script>
-    // Safely retrieve applications from localStorage
+    // Retrieve applications from localStorage
     const profileApplicationsList = document.getElementById('profile-applications-list');
     const storedApplications = localStorage.getItem('profileApplications');
     const profileApplications = storedApplications ? JSON.parse(storedApplications) : [];

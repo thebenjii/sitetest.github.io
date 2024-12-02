@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InternSurf - Submitted Applications</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    .header {
+      background: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+    }
+    .content {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .application {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #fff;
+    }
+    .application h3 {
+      margin: 0 0 0.5rem 0;
+      color: #007bff;
+    }
+    .application p {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>InternSurf - Submitted Applications</h1>
+  </header>
+
+  <!-- Content -->
+  <div class="content" id="applications-list">
+    <h2>Your Applications</h2>
+  </div>
+
+  <script>
+    // Retrieve applications from localStorage
+    const applicationsList = document.getElementById('applications-list');
+    const applications = JSON.parse(localStorage.getItem('applications')) || [];
+
+    if (applications.length > 0) {
+      applications.forEach((app) => {
+        const appDiv = document.createElement('div');
+        appDiv.classList.add('application');
+        appDiv.innerHTML = `
+          <h3>${app.title}</h3>
+          <p><strong>Name:</strong> ${app.name}</p>
+          <p><strong>Email:</strong> ${app.email}</p>
+          <p><strong>Phone:</strong> ${app.phone}</p>
+          <p><strong>Cover Letter:</strong> ${app.coverLetter}</p>
+        `;
+        applicationsList.appendChild(appDiv);
+      });
+    } else {
+      applicationsList.innerHTML = '<p>No applications found.</p>';
+    }
+  </script>
+</body>
+</html>

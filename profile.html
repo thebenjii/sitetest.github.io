@@ -75,21 +75,29 @@
   </div>
 
   <script>
-    // Retrieve applications from localStorage
-    const profileApplications = JSON.parse(localStorage.getItem('profileApplications')) || [];
+    // Safely retrieve applications from localStorage
     const profileApplicationsList = document.getElementById('profile-applications-list');
+    const storedApplications = localStorage.getItem('profileApplications');
+    const profileApplications = storedApplications ? JSON.parse(storedApplications) : [];
 
+    // Check if there are any applications
     if (profileApplications.length > 0) {
+      // Loop through and display each application
       profileApplications.forEach((app, index) => {
         const listItem = document.createElement('li');
         const link = document.createElement('a');
+
+        // Add application title and link
         link.textContent = app.title;
         link.href = `application-details.html?index=${index}`;
         link.target = "_blank"; // Open in a new tab
+
+        // Append to list
         listItem.appendChild(link);
         profileApplicationsList.appendChild(listItem);
       });
     } else {
+      // Display a message if no applications are found
       profileApplicationsList.innerHTML = '<li>No applications found.</li>';
     }
   </script>

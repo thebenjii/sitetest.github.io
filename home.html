@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InternSurf - Explore Internships</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    /* Header */
+    .header {
+      background: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(to bottom right, #007bff, #0056b3);
+      color: white;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    /* Internship Section */
+    .internships {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .internships h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: left;
+    }
+    .card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: #007bff;
+    }
+    .card p {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    .apply-btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #007bff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .apply-btn:hover {
+      background: #0056b3;
+    }
+    /* Footer */
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">INTERNSURF</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Internships</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Explore Internships</h1>
+    <p>Find your perfect match from a wide range of opportunities.</p>
+  </section>
+
+  <!-- Internship Listings -->
+  <section class="internships">
+    <h2>Latest Internship Opportunities</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Software Engineering Intern</h3>
+        <p>Work with a leading tech company on exciting projects.</p>
+        <a href="https://example.com/software-engineering-job" class="apply-btn">Apply Now</a>
+      </div>
+      <div class="card">
+        <h3>Marketing Intern</h3>
+        <p>Join a dynamic marketing team and execute campaigns for top brands.</p>
+        <a href="https://example.com/marketing-job" class="apply-btn">Apply Now</a>
+      </div>
+      <div class="card">
+        <h3>Product Design Intern</h3>
+        <p>Bring your creativity to life with cutting-edge product designs.</p>
+        <a href="https://example.com/product-design-job" class="apply-btn">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 INTERNSURF. All rights reserved.</p>
+  </footer>
+</body>
+</html>
